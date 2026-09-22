@@ -17,13 +17,10 @@ class PassengerSearchingScreen extends StatelessWidget {
       drawer: const CustomDrawer(),
       body: Stack(
         children: [
-          // Map with muted route line
           const DummyMapWidget(
             showRoute: true,
             mutedRoute: true,
           ),
-
-          // Menu button top-left
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -51,8 +48,6 @@ class PassengerSearchingScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // Bottom Sheet
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -82,8 +77,6 @@ class PassengerSearchingScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-
-                  // Fare stepper (+5 button, 50 EGP center, +5 button)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -134,8 +127,6 @@ class PassengerSearchingScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                  // Raise fare button
                   SizedBox(
                     width: double.infinity,
                     height: 48,
@@ -159,8 +150,6 @@ class PassengerSearchingScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-
-                  // Cancel request button (outline)
                   SizedBox(
                     width: double.infinity,
                     height: 48,
@@ -185,8 +174,6 @@ class PassengerSearchingScreen extends StatelessWidget {
                   const SizedBox(height: 16),
                   const Divider(color: AppColors.border),
                   const SizedBox(height: 12),
-
-                  // Address row + EGP 50 row
                   Row(
                     children: const [
                       AppIcon(

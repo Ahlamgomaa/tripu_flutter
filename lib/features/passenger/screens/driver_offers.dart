@@ -21,7 +21,6 @@ class PassengerDriverOffersScreen extends StatelessWidget {
             showRoute: true,
             mutedRoute: true,
           ),
-
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -49,7 +48,6 @@ class PassengerDriverOffersScreen extends StatelessWidget {
               ),
             ),
           ),
-
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -77,7 +75,6 @@ class PassengerDriverOffersScreen extends StatelessWidget {
                       fareText: '55 EGP',
                     ),
                     const SizedBox(height: 12),
-
                     _buildDriverOfferCard(
                       driverName: 'Ahmed',
                       ratingText: '4.8 (88 rides)',
@@ -86,7 +83,6 @@ class PassengerDriverOffersScreen extends StatelessWidget {
                       fareText: '50 EGP',
                     ),
                     const SizedBox(height: 16),
-
                     SizedBox(
                       width: double.infinity,
                       height: 44,
@@ -111,7 +107,6 @@ class PassengerDriverOffersScreen extends StatelessWidget {
                     const SizedBox(height: 12),
                     const Divider(color: AppColors.border),
                     const SizedBox(height: 8),
-
                     Row(
                       children: const [
                         AppIcon(
@@ -183,14 +178,9 @@ class PassengerDriverOffersScreen extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 44,
-                height: 44,
-                decoration: const BoxDecoration(
-                  color: AppColors.border,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(Icons.person, color: AppColors.textSecondary),
+              const CircleAvatar(
+                radius: 22,
+                backgroundImage: AssetImage('assets/images/Profile.png'),
               ),
               const SizedBox(width: 12),
               Expanded(

@@ -30,7 +30,6 @@ class DummyMapWidget extends StatelessWidget {
               mutedRoute: mutedRoute,
             ),
           ),
-
           Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -93,7 +92,6 @@ class DummyMapWidget extends StatelessWidget {
               ],
             ),
           ),
-
           if (overlayWidget != null) overlayWidget!,
         ],
       ),
@@ -119,7 +117,6 @@ class _MapPainter extends CustomPainter {
       ..strokeWidth = 16
       ..style = PaintingStyle.stroke;
 
-    // Draw grid/roads
     final path1 = Path()
       ..moveTo(0, size.height * 0.3)
       ..quadraticBezierTo(size.width * 0.5, size.height * 0.25, size.width, size.height * 0.4);

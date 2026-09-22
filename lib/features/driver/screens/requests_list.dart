@@ -129,19 +129,11 @@ class _DriverRequestsListScreenState extends State<DriverRequestsListScreen> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Avatar circle
-          Container(
-            width: 44,
-            height: 44,
-            decoration: const BoxDecoration(
-              color: AppColors.border,
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(Icons.person, color: AppColors.textSecondary),
+          const CircleAvatar(
+            radius: 22,
+            backgroundImage: AssetImage('assets/images/Profile.png'),
           ),
           const SizedBox(width: 12),
-
-          // Main Info
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,8 +194,6 @@ class _DriverRequestsListScreenState extends State<DriverRequestsListScreen> {
               ],
             ),
           ),
-
-          // Fare & Distance info on right
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: const [

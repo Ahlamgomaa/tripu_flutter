@@ -109,7 +109,6 @@ class _HomeFlowScreenState extends State<HomeFlowScreen> {
         top: false,
         child: Column(
           children: [
-            // Top Navigation & Showcase Switcher Bar
             Material(
               elevation: 4,
               color: AppColors.white,
@@ -118,7 +117,6 @@ class _HomeFlowScreenState extends State<HomeFlowScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Flow Selector (Passenger / Driver)
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
                       child: Row(
@@ -163,7 +161,6 @@ class _HomeFlowScreenState extends State<HomeFlowScreen> {
                         ],
                       ),
                     ),
-
                     SizedBox(
                       height: 40,
                       child: ListView.builder(
@@ -205,7 +202,6 @@ class _HomeFlowScreenState extends State<HomeFlowScreen> {
                 ),
               ),
             ),
-
             Expanded(
               child: IndexedStack(
                 key: ValueKey('${_isPassengerFlow ? "passenger" : "driver"}_$currentIndex'),

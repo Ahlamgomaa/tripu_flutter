@@ -21,18 +21,9 @@ class CustomDrawer extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
                   child: Row(
                     children: [
-                      Container(
-                        width: 48,
-                        height: 48,
-                        decoration: const BoxDecoration(
-                          color: AppColors.border,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.person,
-                          color: AppColors.textSecondary,
-                          size: 30,
-                        ),
+                      const CircleAvatar(
+                        radius: 24,
+                        backgroundImage: AssetImage('assets/images/Profile.png'),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
@@ -77,7 +68,6 @@ class CustomDrawer extends StatelessWidget {
                   ),
                 ),
                 const Divider(color: AppColors.border, height: 24),
-
                 Expanded(
                   child: ListView(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -135,7 +125,6 @@ class CustomDrawer extends StatelessWidget {
                 ),
               ],
             ),
-
             Positioned(
               right: 16,
               bottom: 16,

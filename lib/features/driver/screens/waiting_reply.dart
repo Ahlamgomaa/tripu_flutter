@@ -10,15 +10,10 @@ class DriverWaitingReplyScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Map background
           const DummyMapWidget(),
-
-          // Dimmed overlay over the map
           Container(
             color: Colors.black.withValues(alpha: 0.6),
           ),
-
-          // Centered overlay text
           Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -51,8 +46,6 @@ class DriverWaitingReplyScreen extends StatelessWidget {
               ],
             ),
           ),
-
-          // Bottom card overlay
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -71,14 +64,9 @@ class DriverWaitingReplyScreen extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Container(
-                    width: 44,
-                    height: 44,
-                    decoration: const BoxDecoration(
-                      color: AppColors.border,
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Icon(Icons.person, color: AppColors.textSecondary),
+                  const CircleAvatar(
+                    radius: 22,
+                    backgroundImage: AssetImage('assets/images/Profile.png'),
                   ),
                   const SizedBox(width: 12),
                   Expanded(

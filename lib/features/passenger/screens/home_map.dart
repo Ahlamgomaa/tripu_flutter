@@ -38,7 +38,6 @@ class _PassengerHomeMapScreenState extends State<PassengerHomeMapScreen> {
       body: Stack(
         children: [
           const DummyMapWidget(),
-
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -66,7 +65,6 @@ class _PassengerHomeMapScreenState extends State<PassengerHomeMapScreen> {
               ),
             ),
           ),
-
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -121,14 +119,15 @@ class MainPassengerSheetContent extends StatelessWidget {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    AppIcon(
-                      name: AppIconNames.carRide,
-                      size: 20,
-                      color: AppColors.primaryBlue,
+                  children: [
+                    Image.asset(
+                      'assets/images/front_side_view.png',
+                      width: 24,
+                      height: 24,
+                      fit: BoxFit.contain,
                     ),
-                    SizedBox(width: 8),
-                    Text(
+                    const SizedBox(width: 8),
+                    const Text(
                       'Ride',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -150,14 +149,15 @@ class MainPassengerSheetContent extends StatelessWidget {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    AppIcon(
-                      name: AppIconNames.carComfort,
-                      size: 20,
-                      color: AppColors.textSecondary,
+                  children: [
+                    Image.asset(
+                      'assets/images/front_side_view2.png',
+                      width: 24,
+                      height: 24,
+                      fit: BoxFit.contain,
                     ),
-                    SizedBox(width: 8),
-                    Text(
+                    const SizedBox(width: 8),
+                    const Text(
                       'Comfort',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -171,7 +171,6 @@ class MainPassengerSheetContent extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 16),
-
         Row(
           children: const [
             AppIcon(
@@ -199,7 +198,6 @@ class MainPassengerSheetContent extends StatelessWidget {
             child: VerticalDivider(color: AppColors.border, thickness: 1),
           ),
         ),
-
         Row(
           children: const [
             AppIcon(
@@ -223,7 +221,6 @@ class MainPassengerSheetContent extends StatelessWidget {
         const SizedBox(height: 16),
         const Divider(color: AppColors.border),
         const SizedBox(height: 12),
-
         Row(
           children: [
             const Text(
@@ -255,7 +252,6 @@ class MainPassengerSheetContent extends StatelessWidget {
         const SizedBox(height: 12),
         const Divider(color: AppColors.border),
         const SizedBox(height: 12),
-
         Row(
           children: [
             const Text(
@@ -300,7 +296,6 @@ class MainPassengerSheetContent extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 16),
-
         SizedBox(
           width: double.infinity,
           height: 48,

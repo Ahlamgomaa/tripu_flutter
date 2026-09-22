@@ -17,10 +17,7 @@ class DriverRequestDetailScreen extends StatelessWidget {
       drawer: const CustomDrawer(),
       body: Stack(
         children: [
-          // Map with pickup marker
           const DummyMapWidget(),
-
-          // Menu button top-left
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -48,8 +45,6 @@ class DriverRequestDetailScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // Bottom Card
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -69,18 +64,12 @@ class DriverRequestDetailScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Rider Details Card
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: 44,
-                        height: 44,
-                        decoration: const BoxDecoration(
-                          color: AppColors.border,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(Icons.person, color: AppColors.textSecondary),
+                      const CircleAvatar(
+                        radius: 22,
+                        backgroundImage: AssetImage('assets/images/Profile.png'),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
@@ -167,8 +156,6 @@ class DriverRequestDetailScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                  // Button: Accept for 50 EGP
                   SizedBox(
                     width: double.infinity,
                     height: 48,
@@ -192,8 +179,6 @@ class DriverRequestDetailScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-
-                  // "Offer your fare" label
                   const Center(
                     child: Text(
                       'Offer your fare',
@@ -205,8 +190,6 @@ class DriverRequestDetailScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
-
-                  // Quick-fare buttons: "55", "60", "65" + edit button
                   Row(
                     children: [
                       Expanded(
@@ -286,8 +269,6 @@ class DriverRequestDetailScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 12),
-
-                  // Button: Skip (dark/black, full width)
                   SizedBox(
                     width: double.infinity,
                     height: 48,

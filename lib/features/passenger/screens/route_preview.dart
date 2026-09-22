@@ -17,13 +17,10 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
       drawer: const CustomDrawer(),
       body: Stack(
         children: [
-          // Map showing drawn route path
           const DummyMapWidget(
             showRoute: true,
             mutedRoute: false,
           ),
-
-          // Menu button top-left
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -51,8 +48,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // Bottom Sheet
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -72,7 +67,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Ride / Comfort tabs
                   Row(
                     children: [
                       Expanded(
@@ -84,14 +78,15 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              AppIcon(
-                                name: AppIconNames.carRide,
-                                size: 20,
-                                color: AppColors.primaryBlue,
+                            children: [
+                              Image.asset(
+                                'assets/images/front_side_view.png',
+                                width: 24,
+                                height: 24,
+                                fit: BoxFit.contain,
                               ),
-                              SizedBox(width: 8),
-                              Text(
+                              const SizedBox(width: 8),
+                              const Text(
                                 'Ride',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -113,14 +108,15 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              AppIcon(
-                                name: AppIconNames.carComfort,
-                                size: 20,
-                                color: AppColors.textSecondary,
+                            children: [
+                              Image.asset(
+                                'assets/images/front_side_view2.png',
+                                width: 24,
+                                height: 24,
+                                fit: BoxFit.contain,
                               ),
-                              SizedBox(width: 8),
-                              Text(
+                              const SizedBox(width: 8),
+                              const Text(
                                 'Comfort',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -134,8 +130,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                  // Address row 1
                   Row(
                     children: const [
                       AppIcon(
@@ -163,8 +157,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                       child: VerticalDivider(color: AppColors.border, thickness: 1),
                     ),
                   ),
-
-                  // Address row 2
                   Row(
                     children: const [
                       AppIcon(
@@ -188,8 +180,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                   const SizedBox(height: 16),
                   const Divider(color: AppColors.border),
                   const SizedBox(height: 12),
-
-                  // EGP 50 row
                   Row(
                     children: const [
                       Text(
@@ -209,8 +199,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 12),
-
-                  // Travel Time : 15 min. with small blue progress bar
                   Row(
                     children: const [
                       Text(
@@ -234,8 +222,6 @@ class PassengerRoutePreviewScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // Button: "Find a Ride"
                   SizedBox(
                     width: double.infinity,
                     height: 48,

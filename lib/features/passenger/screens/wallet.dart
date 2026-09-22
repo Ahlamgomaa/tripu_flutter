@@ -22,7 +22,6 @@ class PassengerWalletScreen extends StatelessWidget {
           icon: const AppIcon(
             name: AppIconNames.menu,
             size: 24,
-            color: AppColors.textMain,
           ),
           onPressed: () => scaffoldKey.currentState?.openDrawer(),
         ),
@@ -33,7 +32,6 @@ class PassengerWalletScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Title: Wallet
               const Text(
                 'Wallet',
                 style: TextStyle(
@@ -43,8 +41,6 @@ class PassengerWalletScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-
-              // Gradient Wallet Card
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(20),
@@ -138,8 +134,6 @@ class PassengerWalletScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 24),
-
-              // PAYMENT METHOD Section
               const Text(
                 'PAYMENT METHOD',
                 style: TextStyle(
@@ -202,8 +196,6 @@ class PassengerWalletScreen extends StatelessWidget {
               const SizedBox(height: 24),
               const Divider(color: AppColors.border),
               const SizedBox(height: 16),
-
-              // Transaction History
               const Text(
                 'Transaction History',
                 style: TextStyle(
@@ -213,8 +205,6 @@ class PassengerWalletScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-
-              // Today group
               const Text(
                 'Today',
                 style: TextStyle(
@@ -236,9 +226,7 @@ class PassengerWalletScreen extends StatelessWidget {
                 time: '01:00 AM',
                 amount: '+EGP 100',
               ),
-
               const SizedBox(height: 16),
-              // Tuesday, 19 June group
               const Text(
                 'Tuesday, 19 June',
                 style: TextStyle(
@@ -285,8 +273,7 @@ class PassengerWalletScreen extends StatelessWidget {
             ),
             child: AppIcon(
               name: iconName,
-              size: 20,
-              color: AppColors.primaryBlue,
+              size: 24,
             ),
           ),
           const SizedBox(width: 12),

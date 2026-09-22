@@ -17,13 +17,10 @@ class DriverTripPickupScreen extends StatelessWidget {
       drawer: const CustomDrawer(),
       body: Stack(
         children: [
-          // Map showing route to pickup
           const DummyMapWidget(
             showRoute: true,
             mutedRoute: false,
           ),
-
-          // Menu button top-left
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -51,8 +48,6 @@ class DriverTripPickupScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // Bottom card
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -74,14 +69,9 @@ class DriverTripPickupScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Container(
-                        width: 44,
-                        height: 44,
-                        decoration: const BoxDecoration(
-                          color: AppColors.border,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(Icons.person, color: AppColors.textSecondary),
+                      const CircleAvatar(
+                        radius: 22,
+                        backgroundImage: AssetImage('assets/images/Profile.png'),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
@@ -128,8 +118,6 @@ class DriverTripPickupScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                  // Pickup time : 10:00 min.
                   const Text(
                     'Pickup time : 10:00 min.',
                     style: TextStyle(
@@ -139,8 +127,6 @@ class DriverTripPickupScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-
-                  // Thin blue progress bar
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4),
                     child: const LinearProgressIndicator(
@@ -151,8 +137,6 @@ class DriverTripPickupScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // Button: "Swap to start your trip"
                   SizedBox(
                     width: double.infinity,
                     height: 50,

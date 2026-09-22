@@ -36,14 +36,9 @@ class DriverCustomFareScreen extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Container(
-                      width: 40,
-                      height: 40,
-                      decoration: const BoxDecoration(
-                        color: AppColors.border,
-                        shape: BoxShape.circle,
-                      ),
-                      child: const Icon(Icons.person, color: AppColors.textSecondary),
+                    const CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage('assets/images/Profile.png'),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -95,7 +90,6 @@ class DriverCustomFareScreen extends StatelessWidget {
               ),
             ),
             const Spacer(),
-
             const Text(
               'Offer your fare',
               style: TextStyle(
@@ -105,7 +99,6 @@ class DriverCustomFareScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-
             const Text(
               '59',
               style: TextStyle(
@@ -115,7 +108,6 @@ class DriverCustomFareScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 4),
-
             const Text(
               "Customer's offer: EGP 50",
               style: TextStyle(
@@ -124,7 +116,6 @@ class DriverCustomFareScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: SizedBox(
@@ -151,7 +142,6 @@ class DriverCustomFareScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-
             _buildKeypad(),
             const SizedBox(height: 16),
           ],
