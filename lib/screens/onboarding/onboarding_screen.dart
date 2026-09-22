@@ -1,6 +1,7 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
 import '../../core/assets/app_assets.dart';
+import '../../features/home_flow_screen.dart';
 import 'widgets/onboarding_page.dart';
 import 'widgets/onboarding_button.dart';
 import 'widgets/onboarding_indicator.dart';
@@ -43,12 +44,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     super.dispose();
   }
 
-  void _onSkip() {
-    _pageController.animateToPage(
-      _pages.length - 1,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
+  void _navigateToHome() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const HomeFlowScreen(
+          initialIsPassengerFlow: false,
+        ),
+      ),
     );
+  }
+
+  void _onSkip() {
+    _navigateToHome();
   }
 
   void _onNext() {
@@ -104,7 +112,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-
   Widget _buildHomeIndicator() {
     return Align(
       alignment: Alignment.bottomCenter,
@@ -128,9 +135,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: OnboardingButton(
           text: 'Sign Up / Log In',
-          onPressed: () {
-            // TODO: Action
-          },
+          onPressed: _navigateToHome,
           isFullWidth: true,
         ),
       );

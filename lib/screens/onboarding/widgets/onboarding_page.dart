@@ -80,7 +80,7 @@ class OnboardingPage extends StatelessWidget {
             child: Text(
               subtitle,
               style: TextStyle(
-                color: AppColors.white.withOpacity(0.8),
+                color: AppColors.white.withValues(alpha: 0.8),
                 fontWeight: FontWeight.normal,
                 fontSize: 14,
                 height: 1.5,
